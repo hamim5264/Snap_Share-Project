@@ -1,7 +1,9 @@
 plugins {
-    id "com.android.application"
+    //id "com.android.application"
+    id("com.android.application")
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
+    id("com.google.gms.google-services")
 }
 
 def localProperties = new Properties()
@@ -24,7 +26,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.snap_share"
-    compileSdkVersion flutter.compileSdkVersion
+    //compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -49,6 +52,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -64,4 +68,7 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+    implementation("com.google.firebase:firebase-analytics")
+}
