@@ -51,7 +51,6 @@ class _VerifyLogInScreenState extends State<VerifyLogInScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 15,
-
                     ),
                   ),
                   const SizedBox(
@@ -62,7 +61,7 @@ class _VerifyLogInScreenState extends State<VerifyLogInScreen> {
                       if (value?.trim().isEmpty ?? true) {
                         return "Enter e-mail";
                       } else if (RegExp(
-                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                           .hasMatch(value!)) {
                         return null;
                       }
@@ -155,7 +154,7 @@ class _VerifyLogInScreenState extends State<VerifyLogInScreen> {
   Future<void> userLogin() async {
     if (_formKey.currentState!.validate()) {
       Get.find<UserLoginController>().userLogin(
-          _emailTEController.text.trim(), _passwordTEController.text,context);
+          _emailTEController.text.trim(), _passwordTEController.text, context);
     } else {
       showSnackbar("Something went Wrong!", error: true);
     }

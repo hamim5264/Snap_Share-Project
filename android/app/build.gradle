@@ -28,8 +28,7 @@ android {
     namespace "com.example.snap_share"
     //compileSdkVersion flutter.compileSdkVersion
     compileSdkVersion 34
-    ndkVersion flutter.ndkVersion
-
+    ndkVersion "25.1.8937393"  //flutter.ndkVersion
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

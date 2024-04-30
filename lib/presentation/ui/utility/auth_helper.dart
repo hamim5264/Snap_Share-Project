@@ -31,16 +31,17 @@ class AuthHelper {
   static showDialogue(
       BuildContext context, String tittle, DialogType dialogType,
       {String? descriotion,
-      String? OkButtonName,
-      String? CancelButtonName,
+      String? okButtonName,
+      String? cancelButtonName,
       Color? btnOkColor,
       Color? btnCancelColor,
       Color? backgroundColor}) {
     return AwesomeDialog(
-      titleTextStyle: const TextStyle(fontWeight: FontWeight.w400,fontSize: 20),
-      descTextStyle: const TextStyle(fontWeight: FontWeight.w300,color: Colors.red),
+      titleTextStyle:
+          const TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+      descTextStyle:
+          const TextStyle(fontWeight: FontWeight.w300, color: Colors.red),
       dismissOnTouchOutside: false,
-      //customHeader: Text("Done"),
       barrierColor: Colors.white.withOpacity(.5),
       isDense: true,
       context: context,
@@ -49,7 +50,7 @@ class AuthHelper {
       dialogType: dialogType,
       animType: AnimType.topSlide,
       btnOkOnPress: () {},
-      btnOkText: OkButtonName ,
+      btnOkText: okButtonName,
       btnOkColor: btnOkColor,
       btnOkIcon: Icons.done,
     ).show();
