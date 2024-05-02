@@ -12,7 +12,7 @@ class AppLogo extends StatelessWidget {
     return Image.asset(
       AssetsPath.logo,
       width: width ?? 250,
-      height: height?? 250,
+      height: height ?? 250,
     );
   }
 }

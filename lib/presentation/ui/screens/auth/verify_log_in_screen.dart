@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:snap_share/firebase_servives/user_login_controller.dart';
-import 'package:snap_share/presentation/ui/utility/auth_helper.dart';
 
 import '../../utility/show_snackbar.dart';
 

@@ -76,6 +76,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       if (value?.trim().isEmpty ?? true) {
                         return "Enter full name";
                       }
+                      return null;
                     },
                   ),
                   const SizedBox(
@@ -132,6 +133,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       if (value!.length < 8) {
                         return "Enter password more then 8 digit";
                       }
+                      return null;
                     },
                   ),
                   const SizedBox(
@@ -166,23 +168,22 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   SizedBox(
                     width: double.infinity,
                     child: GetBuilder<CreateAccountController>(
-                      builder: (createAccountController) {
-                        return Visibility(
-                          visible: createAccountController.inProgress==false,
-                          replacement: const CenterCircularProgressIndicator(),
-                          child: ElevatedButton(
-                            onPressed: createAccount,
-                            child: const Text(
-                              "Create Account",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                              ),
+                        builder: (createAccountController) {
+                      return Visibility(
+                        visible: createAccountController.inProgress == false,
+                        replacement: const CenterCircularProgressIndicator(),
+                        child: ElevatedButton(
+                          onPressed: createAccount,
+                          child: const Text(
+                            "Create Account",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
                             ),
                           ),
-                        );
-                      }
-                    ),
+                        ),
+                      );
+                    }),
                   ),
                 ],
               ),
@@ -225,4 +226,3 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     _passwordController.dispose();
   }
 }
-

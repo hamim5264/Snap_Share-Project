@@ -8,11 +8,11 @@ void main() async {
 
  await Firebase.initializeApp(
       options: const FirebaseOptions(
-          apiKey: "AIzaSyCr7CJf0lNgsCZsdQmFWexJ-kezlqfM2TU",
-          appId: "1:76892939231:android:3585d0ceadff7111f09a6a",
-          messagingSenderId: "76892939231",
-          projectId: "snap-share-team-green",
-          storageBucket: 'snap-share-team-green.appspot.com'
+          apiKey: "AIzaSyAC4h2hA-WNUDp-fJ4VBxnGDrsRPSz6xOM",
+          appId: "1:462270560622:android:53dc6818effe2e62a4697f",
+          messagingSenderId: "462270560622",
+          projectId: "snap-share-e40ef",
+          storageBucket: 'snap-share-e40ef.appspot.com'
       ));
 
   runApp(const SnapShare());
