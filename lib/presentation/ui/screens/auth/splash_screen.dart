@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:snap_share/presentation/ui/screens/auth/log_in_screen.dart';
-import 'package:snap_share/presentation/ui/utility/app_colors.dart';
 import 'package:snap_share/presentation/ui/widgets/app_logo.dart';
 
 class SplashScreen extends StatefulWidget {
